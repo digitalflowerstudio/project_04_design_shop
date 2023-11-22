@@ -32,7 +32,7 @@ html {
 }
 
 body {
-  padding: 0rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
 }
 
 /* ------------- Hover Effect for Images ------------- */
@@ -123,10 +123,12 @@ header {
   grid-template-rows: 8vh;
   grid-template-areas: "h1 . navigation";
   align-items: center;
-  position: fixed;
   width: 100%;
   background-color: white;
   z-index: 1000;
+  position: sticky;
+  top: 0;
+  margin-bottom: 1.5rem;
 }
 
 nav {
@@ -137,7 +139,6 @@ nav {
   grid-template-areas: "weekly contact tdb";
   white-space: nowrap;
   gap: 1rem;
-  margin-right: 4rem;
 }
 
 .navItem1 {
