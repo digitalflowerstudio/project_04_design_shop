@@ -19,7 +19,7 @@
   --font-color-black: #000;
   --font-color-gray-light: #848484;
   /* ------------- Font Sizes ------------- */
-  --font-h1: 1.6rem;
+  --font-h1: 1.4rem;
   --font-navigation: 0.8rem;
   --font-main-p: 1rem;
   --font-footer-p-heading: 1rem;
@@ -120,7 +120,7 @@ h1 {
 header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 8vh;
+  grid-template-rows: 10vh;
   grid-template-areas: "h1 . navigation";
   align-items: center;
   width: 100%;
