@@ -1,0 +1,435 @@
+/* ! ------------- Global Styles ------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+@font-face {
+  font-family: "KarlaFont";
+  src: url("../fonts/Karla/Karla-VariableFont_wght.ttf");
+}
+
+:root {
+  /* ------------- Colors ------------- */
+  --font-color-gray-dark: #323a45;
+  --font-color-black: #000;
+  --font-color-gray-light: #848484;
+  /* ------------- Font Sizes ------------- */
+  --font-h1: 1.6rem;
+  --font-navigation: 0.8rem;
+  --font-main-p: 1rem;
+  --font-footer-p-heading: 1rem;
+  --font-footer-p1: 0.9rem;
+  --font-footer-p2: 0.8rem;
+}
+
+html {
+  font-family: "KarlaFont";
+}
+
+body {
+  padding: 0rem 2rem;
+}
+
+/* ------------- Hover Effect for Images ------------- */
+
+img:hover {
+  filter: opacity(50%);
+}
+
+/* ------------- Nav Font Styles ------------- */
+
+.fontNavigation {
+  font-size: var(--font-navigation);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ------------- Global Font Styles ------------- */
+
+.bold {
+  font-size: var(--font-main-p);
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--font-color-black);
+}
+
+.light {
+  font-size: var(--font-main-p);
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--font-color-gray-light);
+}
+
+/* ------------- Footer Font Styles ------------- */
+
+.pFooterBoldText {
+  font-size: var(--font-footer-p-heading);
+  font-weight: 700;
+  color: var(--font-color-black);
+  margin-bottom: 3rem;
+}
+
+.pFooterMedText {
+  font-size: var(--font-footer-p1);
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--font-color-black);
+}
+
+.pFooterMedTextItalic {
+  font-size: var(--font-footer-p1);
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: var(--font-color-black);
+  font-style: italic;
+}
+
+.pFooterMedText a {
+  color: var(--font-color-black);
+}
+
+.pFooterLightText {
+  font-size: var(--font-footer-p2);
+  font-weight: 400;
+  color: var(--font-color-gray-dark);
+}
+
+.pFooterLegalText {
+  font-size: var(--font-footer-p2);
+  font-weight: 400;
+  color: var(--font-color-gray-light);
+}
+
+/* ------------- h1 Styles ------------- */
+
+h1 {
+  font-size: var(--font-h1);
+  font-weight: 700;
+  color: var(--font-color-gray-dark);
+  grid-area: h1;
+  text-transform: uppercase;
+}
+
+/* ------------- Header + Navigation Grid Styles ------------- */
+
+header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 8vh;
+  grid-template-areas: "h1 . navigation";
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  z-index: 1000;
+}
+
+nav {
+  grid-area: navigation;
+  display: grid;
+  place-items: end;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas: "weekly contact tdb";
+  white-space: nowrap;
+  gap: 1rem;
+  margin-right: 4rem;
+}
+
+.navItem1 {
+  grid-area: weekly;
+}
+
+.navItem2 {
+  grid-area: contact;
+}
+
+.navItem3 {
+  grid-area: tdb;
+}
+
+.navItem1 a,
+.navItem2 a,
+.navItem3 a {
+  color: var(--font-color-dark-gray);
+}
+
+/* ------------- Big Product Section Styles & Grid ------------- */
+
+.bigProduct {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 2rem;
+  grid-template-areas:
+    "bigImg bigImg"
+    "description price"
+    "brand .";
+}
+
+/* ? Images for Big Product Section */
+
+.bigProduct img {
+  grid-area: bigImg;
+  object-fit: cover;
+  width: 100%;
+}
+
+.bigProductAnchor {
+  grid-area: bigImg;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* ? Copy Text for Big Product Section */
+
+.description {
+  grid-area: description;
+  margin-top: 1rem;
+}
+
+.brand {
+  grid-area: brand;
+}
+
+.price {
+  grid-area: price;
+  justify-self: end;
+  margin-top: 1rem;
+}
+
+/* ------------- Small Product Section Styles & Grid ------------- */
+
+.smallProduct {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  grid-template-areas:
+    "smallImg1 smallImg1 smallImg2 smallImg2 smallImg3 smallImg3"
+    "description1 price1 description2 price2 description3 price3"
+    "brand1 brand1 brand2 brand2 brand3 brand3"
+    "smallImg4 smallImg4 smallImg5 smallImg5 smallImg6 smallImg6"
+    "description4 price4 description5 price5 description6 price6"
+    "brand4 brand4 brand5 brand5 brand6 brand6";
+}
+
+/* ? Images for Small Product Section */
+
+.smallProductAnchor1 {
+  grid-area: smallImg1;
+  object-fit: cover;
+  width: 100%;
+}
+
+.smallImg1 {
+  grid-area: smallImg1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.smallProductAnchor2 {
+  grid-area: smallImg2;
+  object-fit: cover;
+  width: 100%;
+}
+
+.smallImg2 {
+  grid-area: smallImg2;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.smallProductAnchor3 {
+  grid-area: smallImg3;
+  object-fit: cover;
+  width: 100%;
+}
+
+.smallImg3 {
+  grid-area: smallImg3;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.smallProductAnchor4 {
+  grid-area: smallImg4;
+  object-fit: cover;
+  width: 100%;
+}
+
+.smallImg4 {
+  grid-area: smallImg4;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.smallProductAnchor5 {
+  grid-area: smallImg5;
+  object-fit: cover;
+  width: 100%;
+}
+
+.smallImg5 {
+  grid-area: smallImg5;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.smallProductAnchor6 {
+  grid-area: smallImg6;
+  object-fit: cover;
+  width: 100%;
+}
+
+.smallImg6 {
+  grid-area: smallImg6;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* ? Copy Text for Small Product Section */
+
+.description1 {
+  grid-area: description1;
+  margin-top: 1rem;
+}
+
+.description2 {
+  grid-area: description2;
+  margin-top: 1rem;
+}
+
+.description3 {
+  grid-area: description3;
+  margin-top: 1rem;
+}
+
+.description4 {
+  grid-area: description4;
+  margin-top: 1rem;
+}
+
+.description5 {
+  grid-area: description5;
+  margin-top: 1rem;
+}
+
+.description6 {
+  grid-area: description6;
+  margin-top: 1rem;
+}
+
+.brand1 {
+  grid-area: brand1;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.brand2 {
+  grid-area: brand2;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.brand3 {
+  grid-area: brand3;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.brand4 {
+  grid-area: brand4;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.brand5 {
+  grid-area: brand5;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.brand6 {
+  grid-area: brand6;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+}
+
+.price1 {
+  grid-area: price1;
+  justify-self: end;
+  margin-top: 1rem;
+}
+
+.price2 {
+  grid-area: price2;
+  justify-self: end;
+  margin-top: 1rem;
+}
+
+.price3 {
+  grid-area: price3;
+  justify-self: end;
+  margin-top: 1rem;
+}
+
+.price4 {
+  grid-area: price4;
+  justify-self: end;
+  margin-top: 1rem;
+}
+
+.price5 {
+  grid-area: price5;
+  justify-self: end;
+  margin-top: 1rem;
+}
+
+.price6 {
+  grid-area: price6;
+  justify-self: end;
+  margin-top: 1rem;
+}
+
+/* ------------- Footer Styles & Grid ------------- */
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-areas:
+    "shop shop shop contact contact newsletter newsletter socials"
+    "legalcopy legalcopy legalcopy . . . . .";
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.shop {
+  grid-area: shop;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.newsletter {
+  grid-area: newsletter;
+}
+
+.socials {
+  grid-area: socials;
+}
+
+.legalcopy {
+  grid-area: legalcopy;
+  margin-top: 4rem;
+  padding-bottom: 0.5rem;
+}
